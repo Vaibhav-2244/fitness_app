@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - FitnessApp
+name: Build and deploy Python app to Azure Web App - fitnessApp
 
 on:
   push:
@@ -65,14 +65,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_5D6798A7BFAD4B34A09C7B32AB54BC85 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_352215712A7848709F00EF2C24FB866F }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_087B0D7A84944FB3B7523AA100B7D20F }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_7590EDC71B0B4772BFB6A484EFC60CB4 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_F3E37F37CDBE4C7D934DF52BF1C190A1 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_EACC15C2EF084C108114DBC0CBFEDCC9 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'FitnessApp'
+          app-name: 'fitnessApp'
           slot-name: 'Production'
           
